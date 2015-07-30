@@ -1,4 +1,6 @@
+require("babel/polyfill");
 var Jasmine = require('jasmine');
+
 var JsReporters = require('../dist/js-reporters.js');
 var jasmine = new Jasmine();
 

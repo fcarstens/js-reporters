@@ -1,14 +1,8 @@
 var Jasmine = require('jasmine');
-
-var jasmineCore = require("jasmine-core");
-jasmineCore.Suite.prototype.expectationResultFactory = function(data){
-    console.error(data);
-    return data;
-};
-
 var JsReporters = require('../dist/js-reporters.js');
-
 var jasmine = new Jasmine();
+
+
 jasmine.loadConfig({
     spec_dir: "test/jasmine",
     spec_files: [

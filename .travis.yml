@@ -1,5 +1,7 @@
 language: node_js
-before_script: "npm run build"
+before_script:
+  - "npm run build"
+  - "sed '2102 a console.log(data);' -i node_modules/jasmine-core/lib/jasmine-core/jasmine.js"
 script:
   - "npm test"
   - "npm run lint"
